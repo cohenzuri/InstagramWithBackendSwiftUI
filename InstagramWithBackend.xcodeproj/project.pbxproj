@@ -25,6 +25,7 @@
 		0BFD92E629671738001C6765 /* AuthenticationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BFD92E529671738001C6765 /* AuthenticationView.swift */; };
 		0BFD92EC2967320E001C6765 /* FeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BFD92EB2967320E001C6765 /* FeedView.swift */; };
 		0BFD92EE296734D8001C6765 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BFD92ED296734D8001C6765 /* Theme.swift */; };
+		0BFD92F029674199001C6765 /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BFD92EF29674199001C6765 /* FeedCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +67,7 @@
 		0BFD92E529671738001C6765 /* AuthenticationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationView.swift; sourceTree = "<group>"; };
 		0BFD92EB2967320E001C6765 /* FeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedView.swift; sourceTree = "<group>"; };
 		0BFD92ED296734D8001C6765 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		0BFD92EF29674199001C6765 /* FeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -398,6 +400,7 @@
 			isa = PBXGroup;
 			children = (
 				0BFD92EB2967320E001C6765 /* FeedView.swift */,
+				0BFD92EF29674199001C6765 /* FeedCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -553,6 +556,7 @@
 				0BFD92DC2967080C001C6765 /* MainTabView.swift in Sources */,
 				0BFD92EC2967320E001C6765 /* FeedView.swift in Sources */,
 				0BFD92992966EC87001C6765 /* InstagramWithBackend.xcdatamodeld in Sources */,
+				0BFD92F029674199001C6765 /* FeedCell.swift in Sources */,
 				0BFD928F2966EC85001C6765 /* ContentView.swift in Sources */,
 				0BFD92C429670287001C6765 /* SearchView.swift in Sources */,
 				0BFD92D8296707D0001C6765 /* UploadPostView.swift in Sources */,

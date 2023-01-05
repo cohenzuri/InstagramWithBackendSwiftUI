@@ -21,6 +21,8 @@ class Theme {
         static let add = "plus.square"
         static let heart = "heart"
         static let profile = "person"
+        static let comment = "comment"
+        static let save = "save"
     }
 }
 

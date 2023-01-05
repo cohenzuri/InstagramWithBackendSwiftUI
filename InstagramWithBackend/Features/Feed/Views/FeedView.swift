@@ -10,6 +10,13 @@ import SwiftUI
 struct FeedView: View {
     
     var body: some View {
+        
+        ScrollView {
+            
+            ForEach(0..<20) {  _ in
+                FeedCell()
+            }
+        }
         Text("Feed View")
     }
 }
