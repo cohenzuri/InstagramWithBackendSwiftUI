@@ -13,11 +13,15 @@ struct FeedView: View {
         
         ScrollView {
             
-            ForEach(0..<20) {  _ in
-                FeedCell()
+            LazyVStack(spacing: 32) {
+                
+                ForEach(0..<20) {  _ in
+                    FeedCell()
+                }
             }
+            .padding(.top)
         }
-        Text("Feed View")
+        
     }
 }
 

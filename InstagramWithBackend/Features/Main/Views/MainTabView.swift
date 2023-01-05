@@ -9,40 +9,44 @@
 // add localizetions
 // add unit tests
 
-
-
 import SwiftUI
 
 struct MainTabView: View {
+    
     var body: some View {
         
-        TabView {
+        NavigationView {
             
-            FeedView()
-                .tabItem {
-                    Image(systemName: Theme.Images.home)
-                }
-            
-            SearchView()
-                .tabItem {
-                    Image(systemName: Theme.Images.search)
-                }
-            
-            UploadPostView()
-                .tabItem {
-                    Image(systemName: Theme.Images.add)
-                }
-            
-            NotificationsView()
-                .tabItem {
-                    Image(systemName: Theme.Images.heart)
-                }
-            
-            ProfileView()
-                .tabItem {
-                    Image(systemName: Theme.Images.profile)
-                }
+            TabView {
+                
+                FeedView()
+                    .tabItem {
+                        Image(systemName: Theme.Images.home)
+                    }
+                
+                SearchView()
+                    .tabItem {
+                        Image(systemName: Theme.Images.search)
+                    }
+                
+                UploadPostView()
+                    .tabItem {
+                        Image(systemName: Theme.Images.add)
+                    }
+                
+                NotificationsView()
+                    .tabItem {
+                        Image(systemName: Theme.Images.heart)
+                    }
+                
+                ProfileView()
+                    .tabItem {
+                        Image(systemName: Theme.Images.profile)
+                    }
+            }
         }
+        .navigationTitle("Home")
+        .navigationBarTitleDisplayMode(.inline)
         
     }
 }
