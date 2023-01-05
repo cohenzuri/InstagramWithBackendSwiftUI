@@ -24,6 +24,7 @@
 		0BFD92E129670D26001C6765 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BFD92E029670D26001C6765 /* ProfileView.swift */; };
 		0BFD92E629671738001C6765 /* AuthenticationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BFD92E529671738001C6765 /* AuthenticationView.swift */; };
 		0BFD92EC2967320E001C6765 /* FeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BFD92EB2967320E001C6765 /* FeedView.swift */; };
+		0BFD92EE296734D8001C6765 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BFD92ED296734D8001C6765 /* Theme.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +65,7 @@
 		0BFD92E029670D26001C6765 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		0BFD92E529671738001C6765 /* AuthenticationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationView.swift; sourceTree = "<group>"; };
 		0BFD92EB2967320E001C6765 /* FeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedView.swift; sourceTree = "<group>"; };
+		0BFD92ED296734D8001C6765 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -278,6 +280,7 @@
 				0BFD92D229670331001C6765 /* Models */,
 				0BFD92D129670329001C6765 /* ViewModels */,
 				0BFD92D029670321001C6765 /* Views */,
+				0BFD92ED296734D8001C6765 /* Theme.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -546,6 +549,7 @@
 				0BFD92DF296708D1001C6765 /* NotificationsView.swift in Sources */,
 				0BFD92E629671738001C6765 /* AuthenticationView.swift in Sources */,
 				0BFD92962966EC87001C6765 /* Persistence.swift in Sources */,
+				0BFD92EE296734D8001C6765 /* Theme.swift in Sources */,
 				0BFD92DC2967080C001C6765 /* MainTabView.swift in Sources */,
 				0BFD92EC2967320E001C6765 /* FeedView.swift in Sources */,
 				0BFD92992966EC87001C6765 /* InstagramWithBackend.xcdatamodeld in Sources */,

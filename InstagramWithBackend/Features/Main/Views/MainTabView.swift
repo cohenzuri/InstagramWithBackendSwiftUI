@@ -5,6 +5,12 @@
 //  Created by zuri cohen on 1/5/23.
 //
 
+// TODO:
+// add localizetions
+// add unit tests
+
+
+
 import SwiftUI
 
 struct MainTabView: View {
@@ -12,30 +18,29 @@ struct MainTabView: View {
         
         TabView {
             
-            
             FeedView()
                 .tabItem {
-                    Image(systemName: "house")
+                    Image(systemName: Theme.Images.home)
                 }
             
             SearchView()
                 .tabItem {
-                    Image(systemName: "magnifyingglass")
+                    Image(systemName: Theme.Images.search)
                 }
             
             UploadPostView()
                 .tabItem {
-                    Image(systemName: "plus.square")
+                    Image(systemName: Theme.Images.add)
                 }
             
             NotificationsView()
                 .tabItem {
-                    Image(systemName: "heart")
+                    Image(systemName: Theme.Images.heart)
                 }
             
             ProfileView()
                 .tabItem {
-                    Image(systemName: "person")
+                    Image(systemName: Theme.Images.profile)
                 }
         }
         
