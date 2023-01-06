@@ -19,7 +19,8 @@ struct SearchView: View {
                 
                 Text("Searching for \(searchText)")
                 
-                PostGridView()
+ //               PostGridView()
+                UserListView()
             }
          
         }
