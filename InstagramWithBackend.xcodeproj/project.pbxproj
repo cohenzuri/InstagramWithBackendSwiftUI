@@ -26,6 +26,7 @@
 		0BFD92EC2967320E001C6765 /* FeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BFD92EB2967320E001C6765 /* FeedView.swift */; };
 		0BFD92EE296734D8001C6765 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BFD92ED296734D8001C6765 /* Theme.swift */; };
 		0BFD92F029674199001C6765 /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BFD92EF29674199001C6765 /* FeedCell.swift */; };
+		0BFD92F2296794FE001C6765 /* PostGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BFD92F1296794FE001C6765 /* PostGridView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +69,7 @@
 		0BFD92EB2967320E001C6765 /* FeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedView.swift; sourceTree = "<group>"; };
 		0BFD92ED296734D8001C6765 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		0BFD92EF29674199001C6765 /* FeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
+		0BFD92F1296794FE001C6765 /* PostGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostGridView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -290,6 +292,7 @@
 		0BFD92D029670321001C6765 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				0BFD92F1296794FE001C6765 /* PostGridView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -557,6 +560,7 @@
 				0BFD92EC2967320E001C6765 /* FeedView.swift in Sources */,
 				0BFD92992966EC87001C6765 /* InstagramWithBackend.xcdatamodeld in Sources */,
 				0BFD92F029674199001C6765 /* FeedCell.swift in Sources */,
+				0BFD92F2296794FE001C6765 /* PostGridView.swift in Sources */,
 				0BFD928F2966EC85001C6765 /* ContentView.swift in Sources */,
 				0BFD92C429670287001C6765 /* SearchView.swift in Sources */,
 				0BFD92D8296707D0001C6765 /* UploadPostView.swift in Sources */,
