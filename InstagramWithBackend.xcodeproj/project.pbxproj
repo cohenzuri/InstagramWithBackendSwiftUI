@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0BA2B9FA296A1B2900AD645B /* Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA2B9F9296A1B2900AD645B /* Extentions.swift */; };
 		0BAC70EB296828DB0045AF31 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BAC70EA296828DB0045AF31 /* UserCell.swift */; };
 		0BAC70ED296828F00045AF31 /* UserListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BAC70EC296828F00045AF31 /* UserListView.swift */; };
 		0BFD928D2966EC85001C6765 /* InstagramWithBackendApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BFD928C2966EC85001C6765 /* InstagramWithBackendApp.swift */; };
@@ -49,6 +50,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0BA2B9F9296A1B2900AD645B /* Extentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extentions.swift; sourceTree = "<group>"; };
 		0BAC70EA296828DB0045AF31 /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
 		0BAC70EC296828F00045AF31 /* UserListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListView.swift; sourceTree = "<group>"; };
 		0BFD92892966EC85001C6765 /* InstagramWithBackend.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstagramWithBackend.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -101,6 +103,56 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0B80B27429685F7800206814 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		0B80B27529685F8100206814 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		0B80B27629685F9200206814 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		0B80B27729685FAB00206814 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		0B80B27829685FBF00206814 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		0B80B27929685FC700206814 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		0BA2B9F8296A1B0B00AD645B /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				0BA2B9F9296A1B2900AD645B /* Extentions.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		0BFD92802966EC85001C6765 = {
 			isa = PBXGroup;
 			children = (
@@ -163,7 +215,6 @@
 		0BFD92BD296701B6001C6765 /* Features */ = {
 			isa = PBXGroup;
 			children = (
-				0BFD92E72967177B001C6765 /* Items */,
 				0BFD92D9296707E4001C6765 /* Main */,
 				0BFD92D52967079A001C6765 /* UploadPost */,
 				0BFD92D429670392001C6765 /* Notifications */,
@@ -285,6 +336,7 @@
 		0BFD92CF29670316001C6765 /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				0BA2B9F8296A1B0B00AD645B /* Utils */,
 				0BFD92D229670331001C6765 /* Models */,
 				0BFD92D129670329001C6765 /* ViewModels */,
 				0BFD92D029670321001C6765 /* Views */,
@@ -330,6 +382,8 @@
 		0BFD92D429670392001C6765 /* Notifications */ = {
 			isa = PBXGroup;
 			children = (
+				0B80B27929685FC700206814 /* Models */,
+				0B80B27829685FBF00206814 /* ViewModels */,
 				0BFD92DD296708BB001C6765 /* Views */,
 			);
 			path = Notifications;
@@ -338,6 +392,8 @@
 		0BFD92D52967079A001C6765 /* UploadPost */ = {
 			isa = PBXGroup;
 			children = (
+				0B80B27729685FAB00206814 /* Models */,
+				0B80B27629685F9200206814 /* ViewModels */,
 				0BFD92D6296707B3001C6765 /* Views */,
 			);
 			path = UploadPost;
@@ -354,6 +410,8 @@
 		0BFD92D9296707E4001C6765 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				0B80B27529685F8100206814 /* Models */,
+				0B80B27429685F7800206814 /* ViewModels */,
 				0BFD92DA296707ED001C6765 /* Views */,
 			);
 			path = Main;
@@ -396,13 +454,6 @@
 			children = (
 			);
 			path = ViewModels;
-			sourceTree = "<group>";
-		};
-		0BFD92E72967177B001C6765 /* Items */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Items;
 			sourceTree = "<group>";
 		};
 		0BFD92E8296731CF001C6765 /* Views */ = {
@@ -566,6 +617,7 @@
 				0BFD92DC2967080C001C6765 /* MainTabView.swift in Sources */,
 				0BFD92EC2967320E001C6765 /* FeedView.swift in Sources */,
 				0BFD92992966EC87001C6765 /* InstagramWithBackend.xcdatamodeld in Sources */,
+				0BA2B9FA296A1B2900AD645B /* Extentions.swift in Sources */,
 				0BFD92F029674199001C6765 /* FeedCell.swift in Sources */,
 				0BAC70EB296828DB0045AF31 /* UserCell.swift in Sources */,
 				0BFD92F2296794FE001C6765 /* PostGridView.swift in Sources */,

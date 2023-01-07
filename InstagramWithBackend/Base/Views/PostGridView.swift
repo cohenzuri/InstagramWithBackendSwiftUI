@@ -18,11 +18,17 @@ struct PostGridView: View {
             
             ForEach(0..<10) { _ in
                 
-                Image("post_1")
-                    .resizable()
-                    .scaledToFill()
-                    .frame(width: width, height: width)
-                    .clipped()
+                NavigationLink {
+                    FeedView()
+                } label: {
+                    
+                    Image("post_1")
+                        .resizable()
+                        .scaledToFill()
+                        .frame(width: width, height: width)
+                        .clipped()
+                    
+                }
             }
         })
     }

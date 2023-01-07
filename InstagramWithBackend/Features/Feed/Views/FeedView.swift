@@ -21,7 +21,6 @@ struct FeedView: View {
             }
             .padding(.top)
         }
-        
     }
 }
 

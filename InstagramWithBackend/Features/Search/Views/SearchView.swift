@@ -10,19 +10,21 @@ import SwiftUI
 struct SearchView: View {
     
     @State private var searchText = ""
-     
+    @State private var isInSeatchMode = false
+    
     var body: some View {
         
         NavigationStack {
             
             ScrollView {
                 
-                Text("Searching for \(searchText)")
-                
- //               PostGridView()
-                UserListView()
+                if searchText.isEmpty {
+                    PostGridView()
+                } else {
+                    UserListView()
+                    Text("Searching for \(searchText)")
+                }
             }
-         
         }
         .searchable(text: $searchText)
     }
