@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ProfileActionButtonView: View {
     
-    var isCurrentUser = false
+    var isCurrentUser = true
     var isFllowed = false
     
     var body: some View {
@@ -26,7 +26,7 @@ struct ProfileActionButtonView: View {
                 
                     .font(.system(size: 14, weight: .semibold))
                     .frame(width: 360, height: 32)
-                    .foregroundColor(.black) // TODO: add custom color
+                    .foregroundColor(.white) // TODO: add custom color
                 
                     .overlay(
                         RoundedRectangle(cornerRadius: 3)
@@ -55,7 +55,8 @@ struct ProfileActionButtonView: View {
                             RoundedRectangle(cornerRadius: 3)
                                 .stroke(Color.gray, lineWidth: isFllowed ? 1 : 0)
                         )
-                }.cornerRadius(3)
+                }
+                .cornerRadius(3)
                 
                 Button {
                     
@@ -67,19 +68,15 @@ struct ProfileActionButtonView: View {
                     
                         .font(.system(size: 14, weight: .semibold))
                         .frame(width: 172, height: 32)
-                        .foregroundColor(.black) // TODO: add custom color
-                    
+                        .foregroundColor(.white) // TODO: add custom color
                     
                         .overlay(
                             RoundedRectangle(cornerRadius: 3)
                                 .stroke(Color.gray, lineWidth: 1)
                         )
                 }
-             
             }
-            
         }
-        
     }
 }
 

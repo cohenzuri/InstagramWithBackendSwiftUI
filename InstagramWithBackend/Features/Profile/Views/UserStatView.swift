@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct UserStatView: View {
+    
     let value: Int
     let title: String
     
