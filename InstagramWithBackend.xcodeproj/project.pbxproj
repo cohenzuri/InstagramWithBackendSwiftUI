@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0BA1C943296ACFA200191A61 /* UserStatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA1C942296ACFA200191A61 /* UserStatView.swift */; };
+		0BA1C945296ADF0900191A61 /* ProfileActionButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA1C944296ADF0900191A61 /* ProfileActionButtonView.swift */; };
+		0BA1C947296AE65A00191A61 /* ProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA1C946296AE65A00191A61 /* ProfileHeaderView.swift */; };
 		0BA2B9FA296A1B2900AD645B /* Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA2B9F9296A1B2900AD645B /* Extentions.swift */; };
 		0BA2B9FC296A21EA00AD645B /* NotificationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA2B9FB296A21EA00AD645B /* NotificationCell.swift */; };
 		0BAC70EB296828DB0045AF31 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BAC70EA296828DB0045AF31 /* UserCell.swift */; };
@@ -51,6 +54,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0BA1C942296ACFA200191A61 /* UserStatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStatView.swift; sourceTree = "<group>"; };
+		0BA1C944296ADF0900191A61 /* ProfileActionButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileActionButtonView.swift; sourceTree = "<group>"; };
+		0BA1C946296AE65A00191A61 /* ProfileHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderView.swift; sourceTree = "<group>"; };
 		0BA2B9F9296A1B2900AD645B /* Extentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extentions.swift; sourceTree = "<group>"; };
 		0BA2B9FB296A21EA00AD645B /* NotificationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCell.swift; sourceTree = "<group>"; };
 		0BAC70EA296828DB0045AF31 /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
@@ -441,6 +447,9 @@
 			isa = PBXGroup;
 			children = (
 				0BFD92E029670D26001C6765 /* ProfileView.swift */,
+				0BA1C942296ACFA200191A61 /* UserStatView.swift */,
+				0BA1C944296ADF0900191A61 /* ProfileActionButtonView.swift */,
+				0BA1C946296AE65A00191A61 /* ProfileHeaderView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -625,9 +634,12 @@
 				0BFD92F029674199001C6765 /* FeedCell.swift in Sources */,
 				0BAC70EB296828DB0045AF31 /* UserCell.swift in Sources */,
 				0BFD92F2296794FE001C6765 /* PostGridView.swift in Sources */,
+				0BA1C947296AE65A00191A61 /* ProfileHeaderView.swift in Sources */,
 				0BFD928F2966EC85001C6765 /* ContentView.swift in Sources */,
 				0BFD92C429670287001C6765 /* SearchView.swift in Sources */,
 				0BFD92D8296707D0001C6765 /* UploadPostView.swift in Sources */,
+				0BA1C943296ACFA200191A61 /* UserStatView.swift in Sources */,
+				0BA1C945296ADF0900191A61 /* ProfileActionButtonView.swift in Sources */,
 				0BFD928D2966EC85001C6765 /* InstagramWithBackendApp.swift in Sources */,
 				0BFD92E129670D26001C6765 /* ProfileView.swift in Sources */,
 				0BFD92CE2967030A001C6765 /* CommentsView.swift in Sources */,
