@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import PhotosUI
 
 struct UploadPostView: View {
     
@@ -13,27 +14,15 @@ struct UploadPostView: View {
     @State var postImage: Image?
     @State var captionText = ""
     
+    @State var showImagePicker = false
+    
     var body: some View {
     
         VStack {
             
-            if postImage != nil {
+            if postImage == nil {
                 
-                Button {
-
-                  print("did tap upload post")
-
-                } label: {
-                    
-                    Image(systemName: "plus.circle")
-                        .resizable()
-                        .renderingMode(.template)
-                        .scaledToFill()
-                        .frame(width: 200, height: 200)
-                        .clipped()
-                        .padding(.top, 56)
-                        .foregroundColor(.white)
-                }
+                ImagePicker()
                 
             } else {
                 
