@@ -44,11 +44,25 @@ struct MainTabView: View {
                         Image(systemName: Theme.Images.profile)
                     }
             }
+            .navigationTitle("Home")
+            .navigationBarTitleDisplayMode(.inline)
+            .navigationBarItems(leading: logoutButton)
+            .accentColor(.black)
         }
-        .navigationTitle("Home")
-        .navigationBarTitleDisplayMode(.inline)
-        
     }
+}
+
+extension MainTabView {
+    
+    var logoutButton: some View {
+        
+        Button  {
+            AuthenticationViewModel.shared.signout()
+        } label: {
+            Text("Logout").foregroundColor(.white)
+        }
+    }
+    
 }
 
 struct MainTabView_Previews: PreviewProvider {
