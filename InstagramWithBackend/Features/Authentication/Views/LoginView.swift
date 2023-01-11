@@ -57,7 +57,6 @@ struct LoginView: View {
                     signup
                 }
                 
-                
                 Spacer()
                 
                 Text("Instagram from Facebook")
