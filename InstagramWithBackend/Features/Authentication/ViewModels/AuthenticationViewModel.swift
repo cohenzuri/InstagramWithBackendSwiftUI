@@ -7,6 +7,7 @@
 
 import Foundation
 import Firebase
+import UIKit
 
 class AuthenticationViewModel: ObservableObject {
     
@@ -22,7 +23,8 @@ class AuthenticationViewModel: ObservableObject {
         print("login")
     }
     
-    func register(email: String, password: String) {
+    func register(email: String, password: String, image: UIImage, fullName: String, userName: String) {
+        
         print("register email: \(email) pass: \(password)")
         
         Auth.auth().createUser(withEmail: email, password: password) { result, error in

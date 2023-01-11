@@ -40,7 +40,7 @@ struct LoginView: View {
                 }
                 
                 Button {
-                    authVm.register(email: email, password: password)
+                    
                 } label: {
                     login
                 }
@@ -54,7 +54,11 @@ struct LoginView: View {
                         .foregroundColor(.gray)
                         .font(.headline)
                     
-                    signup
+                    NavigationLink {
+                        RegisterView()
+                    } label: {
+                        signup
+                    }
                 }
                 
                 Spacer()
