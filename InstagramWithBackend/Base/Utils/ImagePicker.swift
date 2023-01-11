@@ -10,18 +10,16 @@ import PhotosUI
 
 struct ImagePicker: View {
     
+    @Binding var image: UIImage?
     @State var selecteItems: [PhotosPickerItem] = []
     @State var data: Data?
+    
+    var handler: (UIImage) -> Void
     
     var body: some View {
         
         VStack {
-            
-            if let data = data, let uiumage = UIImage(data: data) {
-                Image(uiImage: uiumage)
-                    .resizable()
-            }
-           
+     
             PhotosPicker(
                 selection: $selecteItems,
                 maxSelectionCount: 1,
@@ -47,12 +45,16 @@ struct ImagePicker: View {
                     case .success(let data):
                         if let data = data {
                             self.data = data
+                            if let uiImage = UIImage(data: data) {
+                                handler(uiImage)
+                            }
                         } else {
                             print("data is nil")
                         }
                         
                     case .failure(let failure):
-                       fatalError("\(failure)")
+                        print("error: \(failure)")
+                       //fatalError("\(failure)")
                     }
                 }
             }

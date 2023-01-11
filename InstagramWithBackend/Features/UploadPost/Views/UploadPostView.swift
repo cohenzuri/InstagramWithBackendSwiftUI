@@ -11,18 +11,18 @@ import PhotosUI
 struct UploadPostView: View {
     
     @State private var selectedImage: UIImage?
-    @State var postImage: Image?
     @State var captionText = ""
-    
     @State var showImagePicker = false
     
     var body: some View {
     
         VStack {
             
-            if postImage == nil {
+            if selectedImage == nil {
                 
-                ImagePicker()
+                ImagePicker(image: $selectedImage) { image in
+                    selectedImage = image
+                }
                 
             } else {
                 
@@ -30,7 +30,8 @@ struct UploadPostView: View {
                     
                     HStack(alignment: .top) {
                         
-                        Image("post_1")
+
+                        Image(uiImage: selectedImage!)
                             .resizable()
                             .scaledToFill()
                             .frame(width: 96, height: 96)
