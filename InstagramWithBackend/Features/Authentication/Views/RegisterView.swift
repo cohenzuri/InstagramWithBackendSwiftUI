@@ -28,17 +28,18 @@ struct RegisterView: View {
                 self.selectedImage = image
             }
             
-            emailTextField
-            userNameTextField
-            userFullNameTextField
-            passwordSecureFieldView
+            VStack {
+                emailTextField
+                userNameTextField
+                userFullNameTextField
+                passwordSecureFieldView
+            }
             
             Button {
                 authVm.register(email: email, password: password, image: selectedImage!, fullName: fullname, userName: username)
             } label: {
                 signupButtonView
             }
-            
         }
     }
 }

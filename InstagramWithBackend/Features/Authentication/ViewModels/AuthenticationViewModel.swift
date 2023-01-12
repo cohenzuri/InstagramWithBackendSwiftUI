@@ -27,17 +27,31 @@ class AuthenticationViewModel: ObservableObject {
         
         print("register email: \(email) pass: \(password)")
         
-        Auth.auth().createUser(withEmail: email, password: password) { result, error in
+        ImageUploader.uploadImage(image: image) { imageUrl in
             
-            if let error = error {
-                print(error.localizedDescription) // TODO: add error handeling here!
-                return
+            Auth.auth().createUser(withEmail: email, password: password) { result, error in
+                
+                if let error = error {
+                    print(error.localizedDescription) // TODO: add error handeling here!
+                    return
+                }
+                
+                guard let user = result?.user else { return }
+
+                print("user registered!")
+                
+                let data = [
+                    "email": email,
+                    "userName": userName,
+                    "fullName": fullName,
+                    "profileImageUrl": imageUrl,
+                    "uid": user.uid
+                ]
+                
+                Firestore.firestore().collection("users").document(user.uid).setData(data) { _ in
+                    self.userSession  = user
+                }
             }
-            
-            guard let user = result?.user else { return }
-            self.userSession = user
-            print("user registered! ")
-            
         }
     }
     

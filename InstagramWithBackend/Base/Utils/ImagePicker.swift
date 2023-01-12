@@ -29,9 +29,9 @@ struct ImagePicker: View {
                     .resizable()
                     .renderingMode(.template)
                     .scaledToFill()
-                    .frame(width: 200, height: 200)
+                    .frame(width: 100, height: 100)
                     .clipped()
-                    .padding(.top, 56)
+                    .padding()
                     .foregroundColor(.white)
                 
             }.onChange(of: selecteItems) { newValue in
