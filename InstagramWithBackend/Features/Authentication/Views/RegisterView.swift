@@ -36,7 +36,7 @@ struct RegisterView: View {
             }
             
             Button {
-                authVm.register(email: email, password: password, image: selectedImage, fullName: fullname, userName: username)
+                authVm.register(withEmail: email, password: password, image: selectedImage, fullName: fullname, userName: username)
             } label: {
                 signupButtonView
             }

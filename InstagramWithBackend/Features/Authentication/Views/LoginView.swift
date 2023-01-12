@@ -42,7 +42,7 @@ struct LoginView: View {
                     }
                     
                     Button {
-                        
+                        authVm.login(withEmail: email, password: password)
                     } label: {
                         login
                     }
@@ -107,7 +107,6 @@ extension LoginView {
             .background(Theme.Colors.text_field_backgound)
             .border(.black)
             .cornerRadius(8)
-        
     }
     
     var loginWithFacebook: some View {

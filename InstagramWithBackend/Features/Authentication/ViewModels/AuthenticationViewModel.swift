@@ -12,20 +12,27 @@ import UIKit
 class AuthenticationViewModel: ObservableObject {
     
     @Published var userSession: FirebaseAuth.User?
-    
     static let shared = AuthenticationViewModel()
     
     init() {
         self.userSession = Auth.auth().currentUser
     }
     
-    func login() {
-        print("login")
+    func login(withEmail email: String, password: String) {
+        
+        Auth.auth().signIn(withEmail: email, password: password) { result, error in
+            
+            if let error = error {
+                print("Error: Login failed \(error.localizedDescription)") // TODO: error handeling
+                return
+            }
+            
+            guard let user = result?.user else { return }
+            self.userSession = user
+        }
     }
     
-    func register(email: String, password: String, image: UIImage?, fullName: String, userName: String) {
-        
-        print("register email: \(email) pass: \(password)")
+    func register(withEmail email: String, password: String, image: UIImage?, fullName: String, userName: String) {
         
         guard let profileImage = image else {
             print("There is no profile image to register") // TODO: error handeling
@@ -42,7 +49,7 @@ class AuthenticationViewModel: ObservableObject {
                 }
                 
                 guard let user = result?.user else { return }
-
+                
                 let data = [
                     "email": email,
                     "userName": userName,
@@ -60,10 +67,7 @@ class AuthenticationViewModel: ObservableObject {
     
     func signout() {
         
-        print("signout")
-        
         self.userSession = nil
-        
         try? Auth.auth().signOut() // TODO: add error handeling here!
     }
     
