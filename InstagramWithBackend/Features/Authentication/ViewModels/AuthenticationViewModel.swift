@@ -23,11 +23,16 @@ class AuthenticationViewModel: ObservableObject {
         print("login")
     }
     
-    func register(email: String, password: String, image: UIImage, fullName: String, userName: String) {
+    func register(email: String, password: String, image: UIImage?, fullName: String, userName: String) {
         
         print("register email: \(email) pass: \(password)")
         
-        ImageUploader.uploadImage(image: image) { imageUrl in
+        guard let profileImage = image else {
+            print("There is no profile image to register") // TODO: error handeling
+            return
+        }
+        
+        ImageUploader.uploadImage(image: profileImage) { imageUrl in
             
             Auth.auth().createUser(withEmail: email, password: password) { result, error in
                 
@@ -38,8 +43,6 @@ class AuthenticationViewModel: ObservableObject {
                 
                 guard let user = result?.user else { return }
 
-                print("user registered!")
-                
                 let data = [
                     "email": email,
                     "userName": userName,

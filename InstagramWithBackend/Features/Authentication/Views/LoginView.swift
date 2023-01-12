@@ -61,7 +61,6 @@ struct LoginView: View {
                         } label: {
                             signup
                         }
-                        
                     }
                     
                     Spacer()
@@ -71,6 +70,7 @@ struct LoginView: View {
                 }
             }
         }
+        .navigationViewStyle(StackNavigationViewStyle())
     }
 }
 

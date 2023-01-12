@@ -14,7 +14,6 @@ struct RegisterView: View {
     @State private var email = ""
     @State private var username = ""
     @State private var fullname = ""
-    
     @State private var password = ""
     @State private var selectedImage: UIImage?
     @State private var image: Image?
@@ -29,6 +28,7 @@ struct RegisterView: View {
             }
             
             VStack {
+                
                 emailTextField
                 userNameTextField
                 userFullNameTextField
@@ -36,7 +36,7 @@ struct RegisterView: View {
             }
             
             Button {
-                authVm.register(email: email, password: password, image: selectedImage!, fullName: fullname, userName: username)
+                authVm.register(email: email, password: password, image: selectedImage, fullName: fullname, userName: username)
             } label: {
                 signupButtonView
             }

@@ -48,7 +48,9 @@ struct MainTabView: View {
             .navigationBarTitleDisplayMode(.inline)
             .navigationBarItems(leading: logoutButton)
             .accentColor(.black)
+            
         }
+        .navigationViewStyle(StackNavigationViewStyle())
     }
 }
 
