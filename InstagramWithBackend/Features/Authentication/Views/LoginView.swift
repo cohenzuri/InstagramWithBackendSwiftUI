@@ -16,55 +16,59 @@ struct LoginView: View {
     
     var body: some View {
         
-        ZStack {
+        NavigationView {
             
-            backgound
-            
-            VStack {
+            ZStack {
                 
-                Spacer()
+                backgound
                 
-                Group {
-                    
-                    Image(uiImage: UIImage(named: Theme.Images.instagram_text_logo)!)
-                    username
-                    passwordView
-                }
-                
-                HStack {
+                VStack {
                     
                     Spacer()
                     
-                    forgotPassword
-                    
-                }
-                
-                Button {
-                    
-                } label: {
-                    login
-                }
-
-                VStack(spacing: 40) {
-                    
-                    loginWithFacebook
-                    
-                    
-                    Text("OR")
-                        .foregroundColor(.gray)
-                        .font(.headline)
-                    
-                    NavigationLink {
-                        RegisterView()
-                    } label: {
-                        signup
+                    Group {
+                        
+                        Image(uiImage: UIImage(named: Theme.Images.instagram_text_logo)!)
+                        username
+                        passwordView
                     }
+                    
+                    HStack {
+                        
+                        Spacer()
+                        
+                        forgotPassword
+                        
+                    }
+                    
+                    Button {
+                        
+                    } label: {
+                        login
+                    }
+                    
+                    VStack(spacing: 40) {
+                        
+                        loginWithFacebook
+                        
+                        
+                        Text("OR")
+                            .foregroundColor(.gray)
+                            .font(.headline)
+                        
+                        NavigationLink {
+                            RegisterView()
+                        } label: {
+                            signup
+                        }
+                        
+                    }
+                    
+                    Spacer()
+                    
+                    Text("Instagram from Facebook")
+                        .foregroundColor(.gray)
                 }
-                
-                Spacer()
-                
-                Text("Instagram from Facebook")
-                    .foregroundColor(.gray)
             }
         }
     }
@@ -126,13 +130,9 @@ extension LoginView {
             Text("Don't have an account?")
                 .foregroundColor(.gray)
             
-            Button {
-                print("did tap sign up")
-            } label: {
-                Text("Sign up.")
-                
-                    .foregroundColor(Theme.Colors.app_blue)
-            }
+            Text("Sign up.")
+            
+                .foregroundColor(Theme.Colors.app_blue)
         }
     }
     

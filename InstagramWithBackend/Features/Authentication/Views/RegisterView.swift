@@ -10,7 +10,7 @@ import SwiftUI
 struct RegisterView: View {
     
     @EnvironmentObject var authVm: AuthenticationViewModel
-  
+    
     @State private var email = ""
     @State private var username = ""
     @State private var fullname = ""
@@ -21,7 +21,7 @@ struct RegisterView: View {
     @State var imagePickerPresented = false
     
     var body: some View {
-    
+        
         VStack(spacing: 30) {
             
             ImagePicker(image: $selectedImage) { image in
