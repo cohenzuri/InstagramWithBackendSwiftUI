@@ -11,7 +11,7 @@ import UIKit
 
 class AuthenticationViewModel: ObservableObject {
     
-    @Published var userSession: FirebaseAuth.User?
+     @Published var userSession: FirebaseAuth.User?
     static let shared = AuthenticationViewModel()
     
     init() {

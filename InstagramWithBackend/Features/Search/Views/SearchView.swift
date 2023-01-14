@@ -24,7 +24,6 @@ struct SearchView: View {
                     PostGridView()
                 } else {
                     UserListView(searchVm: searchVm, searceText: $searchText)
-                        .padding()
                 }
             }
         }

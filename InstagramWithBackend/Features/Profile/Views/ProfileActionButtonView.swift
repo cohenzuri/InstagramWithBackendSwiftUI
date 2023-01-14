@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ProfileActionButtonView: View {
     
-    var isCurrentUser = true
+    let isCurrentUser: Bool
     var isFllowed = false
     
     var body: some View {
@@ -82,7 +82,7 @@ struct ProfileActionButtonView: View {
 
 struct ProfileActionButtonView_Previews: PreviewProvider {
     static var previews: some View {
-        ProfileActionButtonView()
+        ProfileActionButtonView(isCurrentUser: true)
     }
 }
  

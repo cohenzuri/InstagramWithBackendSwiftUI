@@ -19,10 +19,11 @@ struct UserListView: View {
                 
                 ForEach(searchVm.filteredUsers(searceText)) { user in
                     NavigationLink {
-                        ProfileView()
+                        ProfileView(user: user)
                     } label: {
                         UserCell(user: user)
                             .padding(.leading)
+                            .padding(.vertical, 10)
                     }
                 }
             }

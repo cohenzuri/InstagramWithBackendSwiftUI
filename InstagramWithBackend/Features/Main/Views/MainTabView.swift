@@ -39,10 +39,10 @@ struct MainTabView: View {
                         Image(systemName: Theme.Images.heart)
                     }
                 
-                ProfileView()
-                    .tabItem {
-                        Image(systemName: Theme.Images.profile)
-                    }
+//                ProfileView(user: <#User#>)
+//                    .tabItem {
+//                        Image(systemName: Theme.Images.profile)
+//                    }
             }
             .navigationTitle("Home")
             .navigationBarTitleDisplayMode(.inline)
