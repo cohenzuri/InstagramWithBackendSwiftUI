@@ -9,6 +9,8 @@ import SwiftUI
 
 struct SearchView: View {
     
+    @ObservedObject var searchVm = SearchViewModel()
+    
     @State private var searchText = ""
     @State private var isInSeatchMode = false
     
@@ -21,8 +23,7 @@ struct SearchView: View {
                 if searchText.isEmpty {
                     PostGridView()
                 } else {
-                    UserListView()
-                    Text("Searching for \(searchText)")
+                    UserListView(searchVm: searchVm)
                 }
             }
         }
