@@ -81,7 +81,10 @@ class AuthenticationViewModel: ObservableObject {
         guard let uid = userSession?.uid else { return }
     
         COLLECTION_USERS.document(uid).getDocument { snapshot, _ in
-            print("fetchUser: \(snapshot?.data())")
+            
+            guard let user = try? snapshot?.data(as: User.self) else { return }
+            print("user: \(user.fullname)")
+          
         }
     }
 }
