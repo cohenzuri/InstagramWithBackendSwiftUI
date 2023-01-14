@@ -23,7 +23,8 @@ struct SearchView: View {
                 if searchText.isEmpty {
                     PostGridView()
                 } else {
-                    UserListView(searchVm: searchVm)
+                    UserListView(searchVm: searchVm, searceText: $searchText)
+                        .padding()
                 }
             }
         }

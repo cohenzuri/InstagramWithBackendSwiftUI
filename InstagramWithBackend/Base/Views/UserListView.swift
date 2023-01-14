@@ -10,13 +10,14 @@ import SwiftUI
 struct UserListView: View {
     
     @ObservedObject var searchVm: SearchViewModel
+    @Binding var searceText: String
     
     var body: some View {
         
         ScrollView {
             LazyVStack {
                 
-                ForEach(searchVm.users) { user in
+                ForEach(searchVm.filteredUsers(searceText)) { user in
                     NavigationLink {
                         ProfileView()
                     } label: {
@@ -29,8 +30,10 @@ struct UserListView: View {
     }
 }
 
+/*
 struct UserListView_Previews: PreviewProvider {
     static var previews: some View {
-        UserListView(searchVm: SearchViewModel())
+        UserListView(searchVm: previewSearchVm, searceText: <#T##Binding<String>#>)
     }
 }
+*/
