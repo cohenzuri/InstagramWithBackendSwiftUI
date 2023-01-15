@@ -11,7 +11,9 @@ import UIKit
 
 class AuthenticationViewModel: ObservableObject {
     
-     @Published var userSession: FirebaseAuth.User?
+    @Published var userSession: FirebaseAuth.User?
+    @Published var currentUser: User?
+
     static let shared = AuthenticationViewModel()
     
     init() {
@@ -30,6 +32,7 @@ class AuthenticationViewModel: ObservableObject {
             
             guard let user = result?.user else { return }
             self.userSession = user
+            self.fetchUser()
         }
     }
     
@@ -61,13 +64,13 @@ class AuthenticationViewModel: ObservableObject {
                 
                 COLLECTION_USERS.document(user.uid).setData(data) { _ in
                     self.userSession  = user
+                    self.fetchUser()
                 }
             }
         }
     }
     
     func signout() {
-        
         self.userSession = nil
         try? Auth.auth().signOut() // TODO: add error handeling here!
     }
@@ -79,12 +82,9 @@ class AuthenticationViewModel: ObservableObject {
     func fetchUser() {
         
         guard let uid = userSession?.uid else { return }
-    
         COLLECTION_USERS.document(uid).getDocument { snapshot, _ in
-            
             guard let user = try? snapshot?.data(as: User.self) else { return }
-            print("user: \(user.fullName)")
-          
+            self.currentUser = user
         }
     }
 }

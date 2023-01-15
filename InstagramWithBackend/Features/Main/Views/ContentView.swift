@@ -12,16 +12,15 @@ struct ContentView: View {
     @EnvironmentObject var authVm: AuthenticationViewModel
     
     var body: some View {
-        
         Group {
-            
             if authVm.userSession == nil {
                 LoginView()
             } else {
-                MainTabView()
+                if let user = authVm.currentUser {
+                    MainTabView(user: user)
+                }
             }
         }
-        
     }
 }
 
