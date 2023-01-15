@@ -16,11 +16,18 @@ struct UserService {
         }
     }
     
-    static func unfollow() {
-        
+    static func unfollow(uid: String, completion: @escaping (Error?) -> Void) {
+        guard let currentUid = AuthenticationViewModel.shared.userSession?.uid else { return }
+        COLLECTION_FOLLOWING.document(currentUid).collection("user-following").document(uid).delete { _ in
+            COLLECTION_FOLLOWERS.document(uid).collection("user-followers").document(currentUid).delete(completion: completion)
+        }
     }
     
-    static func checkIfUserIsFollowed() {
-        
+    static func checkIfUserIsFollowed(uid: String, completion: @escaping(Bool) -> Void) {
+        guard let currentUid = AuthenticationViewModel.shared.userSession?.uid else { return }
+        COLLECTION_FOLLOWING.document(currentUid).collection("user-following").document(uid).getDocument { snapshot, error in
+            guard let isFollowed = snapshot?.exists else { return }
+            completion(isFollowed)
+        }
     }
 }
