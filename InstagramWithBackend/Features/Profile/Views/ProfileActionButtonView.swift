@@ -10,12 +10,11 @@ import SwiftUI
 struct ProfileActionButtonView: View {
     
     @ObservedObject var profileVm: ProfileViewModel
-    let isCurrentUser: Bool
-    var isFllowed = false
+    var isFollowed: Bool { return profileVm.user.isFollowed ?? false }
     
     var body: some View {
         
-        if isCurrentUser {
+        if profileVm.user.isCurrentUser {
             
             Button {
                 
@@ -34,25 +33,24 @@ struct ProfileActionButtonView: View {
                             .stroke(Color.gray, lineWidth: 1)
                     )
             }
-            
         } else {
             
             HStack {
                 
                 Button {
-                    isFllowed ? profileVm.unfollow() : profileVm.follow()
+                    isFollowed ? profileVm.unfollow() : profileVm.follow()
                 } label: {
                     
-                    Text(isFllowed ? "Following" : "Follow")
+                    Text(isFollowed ? "Following" : "Follow")
                     
                         .font(.system(size: 14, weight: .semibold))
                         .frame(width: 172, height: 32)
-                        .foregroundColor(isFllowed ? .black : .white) // TODO: add custom color
-                        .background(isFllowed ? Color.white : Color.blue)
+                        .foregroundColor(isFollowed ? .black : .white) // TODO: add custom color
+                        .background(isFollowed ? Color.white : Color.blue)
                     
                         .overlay(
                             RoundedRectangle(cornerRadius: 3)
-                                .stroke(Color.gray, lineWidth: isFllowed ? 1 : 0)
+                                .stroke(Color.gray, lineWidth: isFollowed ? 1 : 0)
                         )
                 }
                 .cornerRadius(3)

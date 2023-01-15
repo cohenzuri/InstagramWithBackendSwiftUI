@@ -42,7 +42,7 @@ struct ProfileHeaderView: View {
             
             HStack {
                 Spacer()
-                ProfileActionButtonView(profileVm: profileVm, isCurrentUser: profileVm.user.isCurrentUser)
+                ProfileActionButtonView(profileVm: profileVm)
                 Spacer()
             }
             Spacer()
