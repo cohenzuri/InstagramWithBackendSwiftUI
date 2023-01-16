@@ -15,6 +15,8 @@
 		0B5025282972B10C00DAB3E2 /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = 0B5025272972B10C00DAB3E2 /* FirebaseMessaging */; };
 		0B50252A2972B10C00DAB3E2 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 0B5025292972B10C00DAB3E2 /* FirebaseStorage */; };
 		0B50252C2972E08500DAB3E2 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B50252B2972E08500DAB3E2 /* SearchViewModel.swift */; };
+		0B5A7D7F2975706E00FC80DD /* Header.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5A7D7E2975706E00FC80DD /* Header.swift */; };
+		0B5A7D81297570C000FC80DD /* StoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5A7D80297570C000FC80DD /* StoryView.swift */; };
 		0BA1C943296ACFA200191A61 /* UserStatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA1C942296ACFA200191A61 /* UserStatView.swift */; };
 		0BA1C945296ADF0900191A61 /* ProfileActionButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA1C944296ADF0900191A61 /* ProfileActionButtonView.swift */; };
 		0BA1C947296AE65A00191A61 /* ProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA1C946296AE65A00191A61 /* ProfileHeaderView.swift */; };
@@ -75,6 +77,8 @@
 /* Begin PBXFileReference section */
 		0B3F7639296D94BE00D3427C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		0B50252B2972E08500DAB3E2 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
+		0B5A7D7E2975706E00FC80DD /* Header.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Header.swift; sourceTree = "<group>"; };
+		0B5A7D80297570C000FC80DD /* StoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryView.swift; sourceTree = "<group>"; };
 		0BA1C942296ACFA200191A61 /* UserStatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStatView.swift; sourceTree = "<group>"; };
 		0BA1C944296ADF0900191A61 /* ProfileActionButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileActionButtonView.swift; sourceTree = "<group>"; };
 		0BA1C946296AE65A00191A61 /* ProfileHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderView.swift; sourceTree = "<group>"; };
@@ -531,6 +535,8 @@
 			children = (
 				0BFD92EB2967320E001C6765 /* FeedView.swift */,
 				0BFD92EF29674199001C6765 /* FeedCell.swift */,
+				0B5A7D7E2975706E00FC80DD /* Header.swift */,
+				0B5A7D80297570C000FC80DD /* StoryView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -701,7 +707,9 @@
 				0BAF11E429717E0300FE604E /* Constants.swift in Sources */,
 				0BFD92DC2967080C001C6765 /* MainTabView.swift in Sources */,
 				0BD17488296DF11400F04EE4 /* AuthenticationViewModel.swift in Sources */,
+				0B5A7D7F2975706E00FC80DD /* Header.swift in Sources */,
 				0BAF11E62972068300FE604E /* User.swift in Sources */,
+				0B5A7D81297570C000FC80DD /* StoryView.swift in Sources */,
 				0BFD92EC2967320E001C6765 /* FeedView.swift in Sources */,
 				0BA2B9FC296A21EA00AD645B /* NotificationCell.swift in Sources */,
 				0BFD92992966EC87001C6765 /* InstagramWithBackend.xcdatamodeld in Sources */,

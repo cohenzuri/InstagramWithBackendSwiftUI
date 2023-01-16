@@ -11,15 +11,23 @@ struct FeedView: View {
     
     var body: some View {
         
-        ScrollView {
+        VStack {
+            Header()
             
-            LazyVStack(spacing: 32) {
+            //TODO: add storys view
+            
+            Divider()
+            
+            ScrollView {
                 
-                ForEach(0..<20) {  _ in
-                    FeedCell()
+                LazyVStack(spacing: 32) {
+                    
+                    ForEach(0..<20) {  _ in
+                        FeedCell()
+                    }
                 }
+                .padding(.top)
             }
-            .padding(.top)
         }
     }
 }
