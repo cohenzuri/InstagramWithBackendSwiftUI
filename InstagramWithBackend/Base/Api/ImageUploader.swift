@@ -9,9 +9,22 @@ import UIKit
 import Firebase
 import FirebaseStorage
 
+enum UploadType {
+    case profile
+    case post
+    func filePath(for filename: String) -> StorageReference { // TODO: add path builer
+        switch self {
+        case .profile:
+            return Storage.storage().reference(withPath: "/profile_images/\(filename)")
+        case .post:
+            return Storage.storage().reference(withPath: "/post_images/\(filename)")
+        }
+    }
+}
+
 struct ImageUploader {
     
-    static func uploadImage(image: UIImage, comletion: @escaping(String) -> Void) {
+    static func uploadImage(image: UIImage, type: UploadType, comletion: @escaping(String) -> Void) {
         
         guard let imageData = image.jpegData(compressionQuality: 0.5) else { return }
         let fileName = NSUUID().uuidString

@@ -27,6 +27,4 @@ class SearchViewModel: ObservableObject {
         let lowercaseQuery = query.lowercased()
         return users.filter({$0.fullName.lowercased().contains(lowercaseQuery) || $0.userName.contains(lowercaseQuery)})
     }
-    
-    
 }

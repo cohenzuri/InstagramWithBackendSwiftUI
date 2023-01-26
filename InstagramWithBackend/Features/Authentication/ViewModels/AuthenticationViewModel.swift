@@ -43,7 +43,7 @@ class AuthenticationViewModel: ObservableObject {
             return
         }
         
-        ImageUploader.uploadImage(image: profileImage) { imageUrl in
+        ImageUploader.uploadImage(image: profileImage, type: .profile) { imageUrl in
             
             Auth.auth().createUser(withEmail: email, password: password) { result, error in
                 
