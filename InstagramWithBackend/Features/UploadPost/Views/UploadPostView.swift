@@ -36,7 +36,8 @@ struct UploadPostView: View {
 //                        TextField("Enter your caption..",
 //                                  text: $captionText)
                         
-                        TextEditor(text: $captionText)
+                        TextArea(text: $captionText, placeholder: "Enter your caption..")
+                            .frame(height: 200)
                     }
                     Button {
                         if let image = selectedImage {
