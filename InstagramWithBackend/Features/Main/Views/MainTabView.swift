@@ -5,48 +5,60 @@
 //  Created by zuri cohen on 1/5/23.
 //
 
-// TODO:
-// add localizetions
-// add unit tests
-
 import SwiftUI
 
 struct MainTabView: View {
     
     let user: User
+    @Binding var selectedIndex: Int
     
     var body: some View {
         
         NavigationView {
             
-            TabView {
+            TabView(selection: $selectedIndex) {
                 
                 FeedView()
+                    .onTapGesture {
+                        selectedIndex = 0
+                    }
                     .tabItem {
                         Image(systemName: Theme.Images.home)
-                    }
+                    }.tag(0)
                 
                 SearchView()
+                    .onTapGesture {
+                        selectedIndex = 1
+                    }
                     .tabItem {
                         Image(systemName: Theme.Images.search)
-                    }
+                    }.tag(1)
                 
-                UploadPostView()
+                UploadPostView(tabIndex: $selectedIndex)
+                    .onTapGesture {
+                        selectedIndex = 2
+                    }
                     .tabItem {
                         Image(systemName: Theme.Images.add)
-                    }
+                    }.tag(2)
                 
                 NotificationsView()
+                    .onTapGesture {
+                        selectedIndex = 3
+                    }
                     .tabItem {
                         Image(systemName: Theme.Images.heart)
-                    }
+                    }.tag(3)
                 
                 ProfileView(user: user)
+                    .onTapGesture {
+                        selectedIndex = 4
+                    }
                     .tabItem {
                         Image(systemName: Theme.Images.profile)
-                    }
+                    }.tag(4)
             }
-            .navigationTitle("Home")
+            .navigationTitle(tabTitle)
             .navigationBarTitleDisplayMode(.inline)
             .navigationBarItems(leading: logoutButton)
             .accentColor(.black)
@@ -59,7 +71,6 @@ struct MainTabView: View {
 extension MainTabView {
     
     var logoutButton: some View {
-        
         Button  {
             AuthenticationViewModel.shared.signout()
         } label: {
@@ -67,13 +78,15 @@ extension MainTabView {
         }
     }
     
-}
-
-struct MainTabView_Previews: PreviewProvider {
-    static var previews: some View {
-        
-        let user = User(userName: "userName", fullName: "fullName", email: "email", profileImageUrl: "https://firebasestorage.googleapis.com:443/v0/b/instagramclone-ac2fa.appspot.com/o/profile_images%2F4A2F2EB0-15FF-4EC6-AEBA-C6F7BDACA059?alt=media&token=6095da57-fd72-4df5-b074-635fce501f1e")
-        
-        MainTabView(user: user)
+    var tabTitle: String {
+        switch selectedIndex {
+        case 0: return "Fead"
+        case 1: return "Explore"
+        case 2: return "New Post"
+        case 3: return "Notifications"
+        case 4: return "Profile"
+        default: return ""
+        }
     }
 }
+

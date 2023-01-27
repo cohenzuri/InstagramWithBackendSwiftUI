@@ -13,24 +13,20 @@ struct UploadPostView: View {
     @State private var selectedImage: UIImage?
     @State var captionText = ""
     @State var showImagePicker = false
+    @ObservedObject var viewModel = UploadPostViewModel()
+    @Binding var tabIndex: Int
     
     var body: some View {
-    
+        
         VStack {
-            
             if selectedImage == nil {
-                
                 ImagePicker(image: $selectedImage) { image in
                     selectedImage = image
                 }
-                
             } else {
-                
                 VStack(spacing: 70) {
-                    
                     HStack(alignment: .top) {
                         
-
                         Image(uiImage: selectedImage!)
                             .resizable()
                             .scaledToFill()
@@ -40,11 +36,15 @@ struct UploadPostView: View {
                         TextField("Enter your caption..",
                                   text: $captionText)
                     }
-                    
                     Button {
-                        print("did tap post")
+                        if let image = selectedImage {
+                            viewModel.uploadPost(caption: captionText, image: image) { _ in
+                                captionText = ""
+                                selectedImage = nil
+                                tabIndex = 0 
+                            }
+                        }
                     } label: {
-                        
                         ZStack {
                             RoundedRectangle(cornerRadius: 5)
                                 .frame(height: 50)
@@ -55,15 +55,8 @@ struct UploadPostView: View {
                     }
                 }
                 .padding()
-                
                 Spacer()
             }
         }
-    }
-}
-
-struct UploadPostView_Previews: PreviewProvider {
-    static var previews: some View {
-        UploadPostView()
     }
 }

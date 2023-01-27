@@ -18,6 +18,38 @@
             endingLineNumber = "17"
             landmarkName = "body"
             landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "3D890141-56B7-4C8D-AD3B-05E6F9531002 - a8df60f29d436940"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "InstagramWithBackend.UserListView.body.getter : some"
+                  moduleName = "InstagramWithBackend"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/zuricohen/Desktop/InstagramWithBackend/InstagramWithBackend/Base/Views/UserListView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "17"
+                  endingLineNumber = "17"
+                  offsetFromSymbolStart = "332">
+               </Location>
+               <Location
+                  uuid = "3D890141-56B7-4C8D-AD3B-05E6F9531002 - 5cb07fdce3351e23"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; SwiftUI.LazyVStack&lt;SwiftUI.ForEach&lt;Swift.Array&lt;InstagramWithBackend.User&gt;, Swift.Optional&lt;Swift.String&gt;, SwiftUI.NavigationLink&lt;&lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0, InstagramWithBackend.ProfileView&gt;&gt;&gt; in InstagramWithBackend.UserListView.body.getter : some"
+                  moduleName = "InstagramWithBackend"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/zuricohen/Desktop/InstagramWithBackend/InstagramWithBackend/Base/Views/UserListView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "383">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
