@@ -33,27 +33,38 @@ struct UploadPostView: View {
                             .frame(width: 96, height: 96)
                             .clipped()
                         
-//                        TextField("Enter your caption..",
-//                                  text: $captionText)
-                        
-                        TextArea(text: $captionText, placeholder: "Enter your caption..")
+                        TextArea(placeholder: "Enter your caption..", text: $captionText)
                             .frame(height: 200)
                     }
-                    Button {
-                        if let image = selectedImage {
-                            viewModel.uploadPost(caption: captionText, image: image) { _ in
-                                captionText = ""
-                                selectedImage = nil
-                                tabIndex = 0 
+                    HStack {
+                        Button {
+                            captionText = ""
+                            selectedImage = nil
+                        } label: {
+                            ZStack {
+                                RoundedRectangle(cornerRadius: 5)
+                                    .frame(height: 50)
+                                    .foregroundColor(.red)
+                                Text("Cancel").font(.system(size: 16, weight: .semibold ))
+                                    .foregroundColor(.white)
                             }
                         }
-                    } label: {
-                        ZStack {
-                            RoundedRectangle(cornerRadius: 5)
-                                .frame(height: 50)
-                            
-                            Text("Share").font(.system(size: 16, weight: .semibold ))
-                                .foregroundColor(.white)
+                        Button {
+                            if let image = selectedImage {
+                                viewModel.uploadPost(caption: captionText, image: image) { _ in
+                                    captionText = ""
+                                    selectedImage = nil
+                                    tabIndex = 0
+                                }
+                            }
+                        } label: {
+                            ZStack {
+                                RoundedRectangle(cornerRadius: 5)
+                                    .frame(height: 50)
+                                    .foregroundColor(.blue)
+                                Text("Share").font(.system(size: 16, weight: .semibold ))
+                                    .foregroundColor(.white)
+                            }
                         }
                     }
                 }
