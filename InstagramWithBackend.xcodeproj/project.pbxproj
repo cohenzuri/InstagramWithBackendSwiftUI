@@ -29,6 +29,7 @@
 		0BAF11E429717E0300FE604E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BAF11E329717E0300FE604E /* Constants.swift */; };
 		0BAF11E62972068300FE604E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BAF11E52972068300FE604E /* User.swift */; };
 		0BB938DB2984364A008BD593 /* TextArea.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB938DA2984364A008BD593 /* TextArea.swift */; };
+		0BB938DD29847627008BD593 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB938DC29847627008BD593 /* Post.swift */; };
 		0BC51027296CAE6F009F2585 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BC51026296CAE6F009F2585 /* RegisterView.swift */; };
 		0BC51029296CAE7E009F2585 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BC51028296CAE7E009F2585 /* LoginView.swift */; };
 		0BC5102B296CAEA2009F2585 /* ResetPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BC5102A296CAEA2009F2585 /* ResetPasswordView.swift */; };
@@ -93,6 +94,7 @@
 		0BAF11E329717E0300FE604E /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		0BAF11E52972068300FE604E /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		0BB938DA2984364A008BD593 /* TextArea.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextArea.swift; sourceTree = "<group>"; };
+		0BB938DC29847627008BD593 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		0BC51026296CAE6F009F2585 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 		0BC51028296CAE7E009F2585 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		0BC5102A296CAEA2009F2585 /* ResetPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordView.swift; sourceTree = "<group>"; };
@@ -448,6 +450,7 @@
 			isa = PBXGroup;
 			children = (
 				0BAF11E52972068300FE604E /* User.swift */,
+				0BB938DC29847627008BD593 /* Post.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -748,6 +751,7 @@
 				0BA1C945296ADF0900191A61 /* ProfileActionButtonView.swift in Sources */,
 				0BFD928D2966EC85001C6765 /* InstagramWithBackendApp.swift in Sources */,
 				0BC51027296CAE6F009F2585 /* RegisterView.swift in Sources */,
+				0BB938DD29847627008BD593 /* Post.swift in Sources */,
 				0BFD92E129670D26001C6765 /* ProfileView.swift in Sources */,
 				0BFD92CE2967030A001C6765 /* CommentsView.swift in Sources */,
 			);
