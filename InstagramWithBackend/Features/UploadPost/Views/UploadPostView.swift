@@ -37,39 +37,50 @@ struct UploadPostView: View {
                             .frame(height: 200)
                     }
                     HStack {
-                        Button {
-                            captionText = ""
-                            selectedImage = nil
-                        } label: {
-                            ZStack {
-                                RoundedRectangle(cornerRadius: 5)
-                                    .frame(height: 50)
-                                    .foregroundColor(.red)
-                                Text("Cancel").font(.system(size: 16, weight: .semibold ))
-                                    .foregroundColor(.white)
-                            }
-                        }
-                        Button {
-                            if let image = selectedImage {
-                                viewModel.uploadPost(caption: captionText, image: image) { _ in
-                                    captionText = ""
-                                    selectedImage = nil
-                                    tabIndex = 0
-                                }
-                            }
-                        } label: {
-                            ZStack {
-                                RoundedRectangle(cornerRadius: 5)
-                                    .frame(height: 50)
-                                    .foregroundColor(.blue)
-                                Text("Share").font(.system(size: 16, weight: .semibold ))
-                                    .foregroundColor(.white)
-                            }
-                        }
+                        shareButton
+                        cancelButton
                     }
                 }
                 .padding()
                 Spacer()
+            }
+        }
+    }
+}
+
+extension UploadPostView {
+    
+    var shareButton: some View {
+        Button {
+            if let image = selectedImage {
+                viewModel.uploadPost(caption: captionText, image: image) { _ in
+                    captionText = ""
+                    selectedImage = nil
+                    tabIndex = 0
+                }
+            }
+        } label: {
+            ZStack {
+                RoundedRectangle(cornerRadius: 5)
+                    .frame(height: 50)
+                    .foregroundColor(.blue)
+                Text("Share").font(.system(size: 16, weight: .semibold ))
+                    .foregroundColor(.white)
+            }
+        }
+    }
+    
+    var cancelButton: some View {
+        Button {
+            captionText = ""
+            selectedImage = nil
+        } label: {
+            ZStack {
+                RoundedRectangle(cornerRadius: 5)
+                    .frame(height: 50)
+                    .foregroundColor(.red)
+                Text("Cancel").font(.system(size: 16, weight: .semibold ))
+                    .foregroundColor(.white)
             }
         }
     }

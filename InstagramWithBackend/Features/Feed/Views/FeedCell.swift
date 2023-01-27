@@ -96,19 +96,16 @@ extension FeedCell {
             Button {
                 
             } label: {
-                
                 Image(Theme.Images.heart)
                     .resizable()
                     .scaledToFill()
                     .frame(width: 20, height: 20)
                     .font(.system(size: 20))
                     .padding(4)
-                
             }
         }
         .padding(.leading, 4)
     }
-  
 }
 
 
