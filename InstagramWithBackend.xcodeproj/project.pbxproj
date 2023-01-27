@@ -28,6 +28,7 @@
 		0BAC70ED296828F00045AF31 /* UserListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BAC70EC296828F00045AF31 /* UserListView.swift */; };
 		0BAF11E429717E0300FE604E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BAF11E329717E0300FE604E /* Constants.swift */; };
 		0BAF11E62972068300FE604E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BAF11E52972068300FE604E /* User.swift */; };
+		0BB938DB2984364A008BD593 /* TextArea.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB938DA2984364A008BD593 /* TextArea.swift */; };
 		0BC51027296CAE6F009F2585 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BC51026296CAE6F009F2585 /* RegisterView.swift */; };
 		0BC51029296CAE7E009F2585 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BC51028296CAE7E009F2585 /* LoginView.swift */; };
 		0BC5102B296CAEA2009F2585 /* ResetPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BC5102A296CAEA2009F2585 /* ResetPasswordView.swift */; };
@@ -91,6 +92,7 @@
 		0BAC70EC296828F00045AF31 /* UserListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListView.swift; sourceTree = "<group>"; };
 		0BAF11E329717E0300FE604E /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		0BAF11E52972068300FE604E /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		0BB938DA2984364A008BD593 /* TextArea.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextArea.swift; sourceTree = "<group>"; };
 		0BC51026296CAE6F009F2585 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 		0BC51028296CAE7E009F2585 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		0BC5102A296CAEA2009F2585 /* ResetPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordView.swift; sourceTree = "<group>"; };
@@ -212,6 +214,7 @@
 				0BA2B9F9296A1B2900AD645B /* Extentions.swift */,
 				0BA1C948296B202500191A61 /* ImagePicker.swift */,
 				0BAF11E329717E0300FE604E /* Constants.swift */,
+				0BB938DA2984364A008BD593 /* TextArea.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -724,6 +727,7 @@
 				0B5A7D84297579D300FC80DD /* UploadPostViewModel.swift in Sources */,
 				0BFD92EC2967320E001C6765 /* FeedView.swift in Sources */,
 				0BA2B9FC296A21EA00AD645B /* NotificationCell.swift in Sources */,
+				0BB938DB2984364A008BD593 /* TextArea.swift in Sources */,
 				0BFD92992966EC87001C6765 /* InstagramWithBackend.xcdatamodeld in Sources */,
 				0BA2B9FA296A1B2900AD645B /* Extentions.swift in Sources */,
 				0BFD92F029674199001C6765 /* FeedCell.swift in Sources */,

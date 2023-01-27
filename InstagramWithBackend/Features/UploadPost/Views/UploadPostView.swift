@@ -33,8 +33,10 @@ struct UploadPostView: View {
                             .frame(width: 96, height: 96)
                             .clipped()
                         
-                        TextField("Enter your caption..",
-                                  text: $captionText)
+//                        TextField("Enter your caption..",
+//                                  text: $captionText)
+                        
+                        TextEditor(text: $captionText)
                     }
                     Button {
                         if let image = selectedImage {
