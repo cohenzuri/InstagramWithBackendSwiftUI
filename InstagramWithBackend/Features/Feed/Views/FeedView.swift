@@ -9,31 +9,21 @@ import SwiftUI
 
 struct FeedView: View {
     
+    @ObservedObject var viewModel = FeedViewModel()
+    
     var body: some View {
-        
         VStack {
             Header()
-            
             //TODO: add storys view
-            
             Divider()
-            
             ScrollView {
-                
                 LazyVStack(spacing: 32) {
-                    
-                    ForEach(0..<20) {  _ in
-                        FeedCell()
+                    ForEach(viewModel.posts) { post in
+                        FeedCell(post: post)
                     }
                 }
                 .padding(.top)
             }
         }
-    }
-}
-
-struct FeedView_Previews: PreviewProvider {
-    static var previews: some View {
-        FeedView()
     }
 }
