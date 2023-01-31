@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Firebase
 
 class FeedCellViewModel: ObservableObject {
     
@@ -16,7 +17,16 @@ class FeedCellViewModel: ObservableObject {
     }
     
     func like() {
-        print("like post")
+        guard let uid = AuthenticationViewModel.shared.userSession.uid  else { return }
+        guard let postId = post.id else { return }
+        
+        COLLECTION_POSTS.document(postId).collection("post-likes")
+            .document(uid).setData([:]) { _ in
+                COLLECTION_USERS.document(uid).collection("user-likes")
+                    .document(postId).setData([:]) { _ in
+                        self.post.didLike = true
+                    }
+            }
     }
     
     func unlike() {

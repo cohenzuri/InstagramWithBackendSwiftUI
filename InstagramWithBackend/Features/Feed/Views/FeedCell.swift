@@ -12,7 +12,7 @@ struct FeedCell: View {
     
     @ObservedObject var feedCellVM: FeedCellViewModel
     
-    var didLike: Bool {return feedCellVM.post.didLike ?? false}
+    var didLike: Bool { return feedCellVM.post.didLike ?? false } 
     
     init(viewModel: FeedCellViewModel) {
         self.feedCellVM = viewModel
@@ -70,7 +70,7 @@ extension FeedCell {
         HStack(spacing: 16) {
             
             Button {
-                self.didLike ? feedCellVM.unlike() : feedCellVM.like()
+                
             } label: {
                 Image(Theme.Images.comment)
                     .resizable()
@@ -93,11 +93,12 @@ extension FeedCell {
             }
             
             Button {
-            
+                self.didLike ? feedCellVM.unlike() : feedCellVM.like()
             } label: {
-                Image(Theme.Images.heart)
+                Image(systemName: didLike ? "heart.fill" : "heart")
                     .resizable()
                     .scaledToFill()
+                foregroundColor( didLike ? .red : .black)
                     .frame(width: 20, height: 20)
                     .font(.system(size: 20))
                     .padding(4)
