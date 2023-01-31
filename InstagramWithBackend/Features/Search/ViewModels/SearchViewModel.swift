@@ -10,9 +10,18 @@ import Foundation
 class SearchViewModel: ObservableObject {
     
     @Published var users = [User]()
+    @Published var posts = [Post]()
     
     init() {
         self.fetchUsers()
+        self.fetchPost()
+    }
+    
+    func fetchPost() {
+        COLLECTION_POSTS.getDocuments { snapshot, error in
+            guard let document = snapshot?.documents else { return }
+            self.posts = document.compactMap({try? $0.data(as: Post.self)})
+        }
     }
     
     func fetchUsers() {

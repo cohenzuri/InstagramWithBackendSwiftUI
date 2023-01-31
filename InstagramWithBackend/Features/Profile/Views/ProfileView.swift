@@ -10,6 +10,7 @@ import SwiftUI
 struct ProfileView: View {
     
     @ObservedObject var profileVm: ProfileViewModel
+    
     let user: User
     
     init(user: User) {
@@ -23,7 +24,7 @@ struct ProfileView: View {
             
             VStack(spacing: 32) {
                 ProfileHeaderView(profileVm: profileVm)
-                PostGridView()
+                //PostGridView(searchVm: <#SearchViewModel#>)
             }.padding(.top)
         }
         .padding()
