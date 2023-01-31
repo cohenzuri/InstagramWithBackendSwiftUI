@@ -10,7 +10,13 @@ import Kingfisher
 
 struct FeedCell: View {
     
-    var post: Post
+    @ObservedObject var feedCellVM: FeedCellViewModel
+    
+    var didLike: Bool {return feedCellVM.post.didLike ?? false}
+    
+    init(viewModel: FeedCellViewModel) {
+        self.feedCellVM = viewModel
+    }
     
     var body: some View {
         
@@ -18,7 +24,7 @@ struct FeedCell: View {
             
             header
             
-            KFImage(URL(string: post.imageUrl))
+            KFImage(URL(string: feedCellVM.post.imageUrl))
                 .resizable()
                 .scaledToFill()
                 .frame(maxHeight: 440)
@@ -26,12 +32,12 @@ struct FeedCell: View {
             
             buttonActionSection
             
-            Text("\(post.likes) likes").font(.system(size: 14, weight: .semibold))
+            Text("\(feedCellVM.post.likes) likes").font(.system(size: 14, weight: .semibold))
                 .padding(.leading, 8)
                 .padding(.bottom, 2)
             HStack {
-                Text(post.ownerUsername).font(.system(size: 14, weight: .semibold)) +
-                Text(post.caption)
+                Text(feedCellVM.post.ownerUsername).font(.system(size: 14, weight: .semibold)) +
+                Text(feedCellVM.post.caption)
                     .font(.system(size: 15))
             }.padding(.horizontal, 8)
             
@@ -47,12 +53,12 @@ extension FeedCell {
     
     var header: some View {
         HStack {
-            KFImage(URL(string: post.ownerImageUrl))
+            KFImage(URL(string: feedCellVM.post.ownerImageUrl))
                 .scaledToFill()
                 .frame(width: 36,height: 36)
                 .clipped()
                 .cornerRadius(18)
-            Text(post.ownerUsername)
+            Text(feedCellVM.post.ownerUsername)
                 .font(.system(size: 14,
                               weight: .semibold))
         }
@@ -64,7 +70,7 @@ extension FeedCell {
         HStack(spacing: 16) {
             
             Button {
-                
+                self.didLike ? feedCellVM.unlike() : feedCellVM.like()
             } label: {
                 Image(Theme.Images.comment)
                     .resizable()
@@ -87,7 +93,7 @@ extension FeedCell {
             }
             
             Button {
-                
+            
             } label: {
                 Image(Theme.Images.heart)
                     .resizable()
