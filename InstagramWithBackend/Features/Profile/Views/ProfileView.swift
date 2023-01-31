@@ -24,7 +24,7 @@ struct ProfileView: View {
             
             VStack(spacing: 32) {
                 ProfileHeaderView(profileVm: profileVm)
-                //PostGridView(searchVm: <#SearchViewModel#>)
+                PostGridView(config: .profile(user.id ?? ""))
             }.padding(.top)
         }
         .padding()

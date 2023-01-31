@@ -10,16 +10,22 @@ import Kingfisher
 
 struct PostGridView: View {
     
-    @ObservedObject var searchVm: SearchViewModel
+    @ObservedObject var postGridVm: PostGridViewModel
     
     private let items = [GridItem(), GridItem(), GridItem()]
     private let width = UIScreen.main.bounds.width / 3
+    let config: PostGridConfiguration
+    
+    init(config: PostGridConfiguration) {
+        self.config = config
+        self.postGridVm = PostGridViewModel(config: config)
+    }
     
     var body: some View {
         
         LazyVGrid(columns: items, spacing: 2, content:  {
             
-            ForEach(searchVm.posts) { post in
+            ForEach(postGridVm.posts) { post in
                 
                 NavigationLink {
                     FeedView()

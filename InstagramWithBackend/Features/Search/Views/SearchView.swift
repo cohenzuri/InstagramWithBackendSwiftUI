@@ -21,7 +21,7 @@ struct SearchView: View {
             ScrollView {
                 
                 if searchText.isEmpty {
-                    PostGridView(searchVm: searchVm)
+                    PostGridView(config: .explore)
                 } else {
                     UserListView(searchVm: searchVm, searceText: $searchText)
                 }
